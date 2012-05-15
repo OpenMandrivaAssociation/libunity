@@ -3,7 +3,7 @@
 %define develname %mklibname unity -d
 
 Name:           libunity
-Version:        4.0.6
+Version:        5.12.0
 Release:        1
 License:        LGPLv3
 Summary:        Unity instrumenting and integration library
