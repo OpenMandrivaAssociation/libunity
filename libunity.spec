@@ -1,4 +1,4 @@
-%define major 6
+%define major 9
 %define libname %mklibname unity %{major}
 %define develname %mklibname unity -d
 
