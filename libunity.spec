@@ -88,4 +88,5 @@ find %{buildroot}%{_libdir} -name '*.la' -type f -delete -print
 %{_libdir}/pkgconfig/*.pc
 %{_datadir}/vala/vapi/
 %{_datadir}/gir-1.0/*.gir
+%{_bindir}/unity-tool
 
