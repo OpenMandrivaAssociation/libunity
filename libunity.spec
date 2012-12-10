@@ -3,13 +3,13 @@
 %define develname %mklibname unity -d
 
 Name:           libunity
-Version:        5.12.0
-Release:        1
+Version:        6.12.0
+Release:        2
 License:        LGPLv3
 Summary:        Unity instrumenting and integration library
 Url:            http://launchpad.net/libunity
 Group:          System/Libraries
-Source:         %{name}-%{version}.tar.gz
+Source0:        https://launchpad.net/libunity/6.0/%{version}/+download/libunity-%{version}.tar.gz
 BuildRequires:  gtk-doc
 BuildRequires:  pkgconfig(dbusmenu-glib-0.4)
 BuildRequires:  pkgconfig(dee-1.0)
@@ -17,6 +17,9 @@ BuildRequires:  pkgconfig(gee-1.0)
 BuildRequires:  pkgconfig(glib-2.0)
 BuildRequires:  pkgconfig(gobject-introspection-1.0)
 BuildRequires:  vala-devel
+BuildRequires:  vala
+BuildRequires:	intltool
+BuildRequires:	gtk+3-devel
 
 %description
 Libunity is a shared library to be able to interact with the launcher and
@@ -30,8 +33,6 @@ Group:          System/Libraries
 Unity instrumenting and integration library - shared libraries
 Libunity is a shared library to be able to interact with the launcher and
 add places in Unity environment.
-
-This package provides the shared libraries to be used by applications.
 
 %package -n %{develname}
 Summary:        Unity instrumenting and integration library - development files
@@ -71,22 +72,21 @@ find %{buildroot}%{_libdir} -name '*.la' -type f -delete -print
 
 
 %files -n %{libname}
-%defattr(-,root,root)
 %{_libdir}/libunity.so.%{major}*
+%{_libdir}/libunity/libunity-protocol-private.so.*
 %{_libdir}/girepository-1.0/*.typelib
 
 %files -n python-%{name}
-%defattr(-,root,root)
 %{python_sitearch}/gi/overrides/Unity.*
 
 %files -n %{develname}
-%defattr(-,root,root)
 %dir %{_includedir}/unity
 %dir %{_datadir}/gir-1.0
 %{_includedir}/unity/unity/
 %{_libdir}/libunity.so
+%{_libdir}/libunity/libunity-protocol-private.so
 %{_libdir}/pkgconfig/*.pc
 %{_datadir}/vala/vapi/
 %{_datadir}/gir-1.0/*.gir
-%{_bindir}/unity-tool
-
+%{_bindir}/libunity-tool
+%{_datadir}/glib-2.0/schemas/com.canonical.Unity.Lenses.gschema.xml
