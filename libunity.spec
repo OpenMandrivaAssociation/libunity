@@ -7,6 +7,7 @@ Version:        6.12.0
 Release:        2
 License:        LGPLv3
 Summary:        Unity instrumenting and integration library
+
 Url:            http://launchpad.net/libunity
 Group:          System/Libraries
 Source0:        https://launchpad.net/libunity/6.0/%{version}/+download/libunity-%{version}.tar.gz
@@ -27,6 +28,7 @@ add places in Unity environment.
 
 %package -n %{libname}
 Summary:        Unity instrumenting and integration library - shared libraries
+
 Group:          System/Libraries
 
 %description -n %{libname}
@@ -36,6 +38,7 @@ add places in Unity environment.
 
 %package -n %{develname}
 Summary:        Unity instrumenting and integration library - development files
+
 Group:          Development/C
 Requires:       %{libname} = %{version}-%{release}
 Provides:       %{name}-devel = %{version}-%{release}
@@ -49,8 +52,9 @@ This package provides the development files required to build applications.
 
 %package -n python-%{name}
 Summary:        Python bindings for libunity
+
 Group:          Development/Python
-%py_requires
+BuildRequires:	python-devel
 
 %description -n python-%{name}
 Unity instrumenting and integration library - python bindings
@@ -77,7 +81,7 @@ find %{buildroot}%{_libdir} -name '*.la' -type f -delete -print
 %{_libdir}/girepository-1.0/*.typelib
 
 %files -n python-%{name}
-%{python_sitearch}/gi/overrides/Unity.*
+%{py_platsitedir}/gi/overrides/Unity.*
 
 %files -n %{develname}
 %dir %{_includedir}/unity
