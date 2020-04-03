@@ -81,12 +81,22 @@ find %{buildroot}%{_libdir} -name '*.la' -type f -delete -print
 
 
 %files -n %{libname}
+%{_bindir}/libunity-tool
+%{_bindir}/unity-scope-loader
 %{_libdir}/libunity.so.%{major}*
+%{_libdir}/libunity-extras.so.%{major}*
 %{_libdir}/libunity/libunity-protocol-private.so.*
 %{_libdir}/girepository-1.0/*.typelib
+%{_datadir}/unity-scopes/__pycache__/scope-runner-dbus.cpython-38.opt-1.pyc
+%{_datadir}/unity-scopes/__pycache__/scope-runner-dbus.cpython-38.pyc
+%{_datadir}/unity-scopes/scope-runner-dbus.py
+%{_datadir}/unity/client-scopes-phone.json
+%{_datadir}/unity/client-scopes.json
 
 %files -n python-%{name}
 %{py_platsitedir}/gi/overrides/Unity.*
+%{py_platsitedir}/gi/overrides/__pycache__/Unity.cpython-38.opt-1.pyc
+%{py_platsitedir}/gi/overrides/__pycache__/Unity.cpython-38.pyc
 
 %files -n %{develname}
 %dir %{_includedir}/unity
@@ -97,5 +107,4 @@ find %{buildroot}%{_libdir} -name '*.la' -type f -delete -print
 %{_libdir}/pkgconfig/*.pc
 %{_datadir}/vala/vapi/
 %{_datadir}/gir-1.0/*.gir
-%{_bindir}/libunity-tool
 %{_datadir}/glib-2.0/schemas/com.canonical.Unity.Lenses.gschema.xml
