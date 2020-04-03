@@ -3,14 +3,15 @@
 %define develname %mklibname unity -d
 
 Name:           libunity
-Version:        6.12.0
-Release:        3
+Version:        7.1.4
+Release:        1
 License:        LGPLv3
 Summary:        Unity instrumenting and integration library
 
 Url:            http://launchpad.net/libunity
 Group:          System/Libraries
-Source0:        https://launchpad.net/libunity/6.0/%{version}/+download/libunity-%{version}.tar.gz
+Source0:        https://launchpad.net/ubuntu/+archive/primary/+files/libunity_%{version}+19.04.20190319.orig.tar.gz
+#Source0:        https://launchpad.net/libunity/6.0/%{version}/+download/libunity-%{version}.tar.gz
 BuildRequires:  gtk-doc
 BuildRequires:  pkgconfig(dbusmenu-glib-0.4)
 BuildRequires:  pkgconfig(dee-1.0)
@@ -65,7 +66,7 @@ add places in Unity environment.
 %setup -q
 
 %build
-%configure2_5x \
+%configure \
   --disable-static \
   --enable-gtk-doc
 %make
