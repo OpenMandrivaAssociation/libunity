@@ -12,6 +12,8 @@ Url:            http://launchpad.net/libunity
 Group:          System/Libraries
 Source0:        https://launchpad.net/ubuntu/+archive/primary/+files/libunity_%{version}+19.04.20190319.orig.tar.gz
 #Source0:        https://launchpad.net/libunity/6.0/%{version}/+download/libunity-%{version}.tar.gz
+Patch0:         0001-Fix-FTB-with-recent-vala-requiring-non-public-abstra.patch
+
 BuildRequires:  gtk-doc
 BuildRequires:  pkgconfig(dbusmenu-glib-0.4)
 BuildRequires:  pkgconfig(dee-1.0)
@@ -71,10 +73,10 @@ NOCONFIGURE=1 ./autogen.sh
 %configure \
   --disable-static \
   --enable-gtk-doc
-%make
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 find %{buildroot}%{_libdir} -name '*.la' -type f -delete -print
 
 
