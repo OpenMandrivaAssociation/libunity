@@ -103,6 +103,7 @@ find %{buildroot}%{_libdir} -name '*.la' -type f -delete -print
 %dir %{_datadir}/gir-1.0
 %{_includedir}/unity/unity/
 %{_libdir}/libunity.so
+%{_libdir}/libunity-extras.so
 %{_libdir}/libunity/libunity-protocol-private.so
 %{_libdir}/pkgconfig/*.pc
 %{_datadir}/vala/vapi/
