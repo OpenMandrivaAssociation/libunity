@@ -21,6 +21,7 @@ BuildRequires:  pkgconfig(gobject-introspection-1.0)
 BuildRequires:  vala-devel
 BuildRequires:  vala
 BuildRequires:	intltool
+BuildRequires:  gnome-common
 BuildRequires:	gtk+3-devel
 
 %description
