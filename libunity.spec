@@ -63,7 +63,7 @@ Libunity is a shared library to be able to interact with the launcher and
 add places in Unity environment.
 
 %prep
-%autosetup -p1
+%autosetup -p1 -n libunity_7.1.4+19.04.20190319.orig
 
 %build
 %configure \
