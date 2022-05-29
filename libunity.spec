@@ -4,14 +4,13 @@
 
 Name:           libunity
 Version:        7.1.4
-Release:        1
+Release:        2
 License:        LGPLv3
 Summary:        Unity instrumenting and integration library
 
 Url:            http://launchpad.net/libunity
 Group:          System/Libraries
 Source0:        https://launchpad.net/ubuntu/+archive/primary/+files/libunity_%{version}+19.04.20190319.orig.tar.gz
-#Source0:        https://launchpad.net/libunity/6.0/%{version}/+download/libunity-%{version}.tar.gz
 Patch0:         0001-Fix-FTB-with-recent-vala-requiring-non-public-abstra.patch
 Patch1:         libunity-7.1.4-vala-053.patch
 
@@ -90,16 +89,12 @@ find %{buildroot}%{_libdir} -name '*.la' -type f -delete -print
 %{_libdir}/libunity-extras.so.%{major}*
 %{_libdir}/libunity/libunity-protocol-private.so.*
 %{_libdir}/girepository-1.0/*.typelib
-%{_datadir}/unity-scopes/__pycache__/scope-runner-dbus.cpython-38.opt-1.pyc
-%{_datadir}/unity-scopes/__pycache__/scope-runner-dbus.cpython-38.pyc
 %{_datadir}/unity-scopes/scope-runner-dbus.py
 %{_datadir}/unity/client-scopes-phone.json
 %{_datadir}/unity/client-scopes.json
 
 %files -n python-%{name}
 %{py_platsitedir}/gi/overrides/Unity.*
-%{py_platsitedir}/gi/overrides/__pycache__/Unity.cpython-38.opt-1.pyc
-%{py_platsitedir}/gi/overrides/__pycache__/Unity.cpython-38.pyc
 
 %files -n %{develname}
 %dir %{_includedir}/unity
