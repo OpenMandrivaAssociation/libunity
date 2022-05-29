@@ -69,6 +69,8 @@ add places in Unity environment.
 %autosetup -p1 -n libunity_7.1.4+19.04.20190319.orig
 
 %build
+export CC=gcc
+export CXX=g++
 NOCONFIGURE=1 ./autogen.sh
 %configure \
   --disable-static \
