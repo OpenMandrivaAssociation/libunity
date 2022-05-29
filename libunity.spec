@@ -96,9 +96,9 @@ find %{buildroot}%{_libdir} -name '*.la' -type f -delete -print
 #{_datadir}/unity-scopes/__pycache__/scope-runner-dbus.cpython-*.pyc
 
 %files -n python-%{name}
-#{py_platsitedir}/gi/overrides/Unity.*
-#{python_sitearch}/gi/overrides/__pycache__/Unity.cpython-*.
-#{python_sitearch}/gi/overrides/__pycache__/Unity.cpython-*.pyc
+%{python_sitearch}/gi/overrides/Unity.py
+%{python_sitearch}/gi/overrides/__pycache__/Unity.cpython-*.opt-1.pyc
+%{python_sitearch}/gi/overrides/__pycache__/Unity.cpython-*.pyc
 
 %files -n %{develname}
 %dir %{_includedir}/unity
