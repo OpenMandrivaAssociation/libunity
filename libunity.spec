@@ -97,7 +97,7 @@ find %{buildroot}%{_libdir} -name '*.la' -type f -delete -print
 
 %files -n python-%{name}
 #{py_platsitedir}/gi/overrides/Unity.*
-%{python_sitearch}/gi/overrides/__pycache__/Unity.cpython-*.
+#{python_sitearch}/gi/overrides/__pycache__/Unity.cpython-*.
 #{python_sitearch}/gi/overrides/__pycache__/Unity.cpython-*.pyc
 
 %files -n %{develname}
