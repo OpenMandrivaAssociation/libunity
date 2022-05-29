@@ -15,7 +15,6 @@ Group:          System/Libraries
 Source0:        %{name}-%{git}.tar.xz
 #Source0:        https://launchpad.net/ubuntu/+archive/primary/+files/libunity_%{version}+19.04.20190319.orig.tar.gz
 #Source0:        https://launchpad.net/libunity/6.0/%{version}/+download/libunity-%{version}.tar.gz
-Patch0:         0001-Fix-FTB-with-recent-vala-requiring-non-public-abstra.patch
 
 BuildRequires:  gtk-doc
 BuildRequires:  pkgconfig(dbusmenu-glib-0.4)
