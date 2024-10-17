@@ -8,7 +8,7 @@ Release:        2
 License:        LGPLv3
 Summary:        Unity instrumenting and integration library
 
-Url:            http://launchpad.net/libunity
+Url:            https://launchpad.net/libunity
 Group:          System/Libraries
 Source0:        https://launchpad.net/ubuntu/+archive/primary/+files/libunity_%{version}+19.04.20190319.orig.tar.gz
 Patch0:         0001-Fix-FTB-with-recent-vala-requiring-non-public-abstra.patch
