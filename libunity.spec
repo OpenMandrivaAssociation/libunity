@@ -4,7 +4,7 @@
 
 Name:           libunity
 Version:        7.1.4
-Release:        2
+Release:        3
 License:        LGPLv3
 Summary:        Unity instrumenting and integration library
 
