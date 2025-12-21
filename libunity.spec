@@ -14,6 +14,11 @@ Source0:        https://launchpad.net/ubuntu/+archive/primary/+files/libunity_%{
 Patch0:         0001-Fix-FTB-with-recent-vala-requiring-non-public-abstra.patch
 Patch1:         libunity-7.1.4-vala-053.patch
 
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
+BuildRequires:	make
 BuildRequires:  gtk-doc
 BuildRequires:  pkgconfig(dbusmenu-glib-0.4)
 BuildRequires:  pkgconfig(dee-1.0)
